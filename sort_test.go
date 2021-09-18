@@ -28,3 +28,15 @@ func TestSelectionSortDescShouldReturnSortedArray(t *testing.T) {
 		t.Errorf("Expected result is %v but got %v", expectedRes, res)
 	}
 }
+
+func TestSelectionSortDescGetEmptyArrayShouldReturnEmptyArray(t *testing.T) {
+	//arrange
+	var arr []int
+	expectedRes := []int{}
+	//act
+	var res = selection_sort_desc(arr)
+	//assert
+	if reflect.DeepEqual(expectedRes, res) {
+		t.Errorf("Expected result is %v but got %v", expectedRes, res)
+	}
+}

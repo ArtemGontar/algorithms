@@ -5,6 +5,9 @@ import (
 )
 
 func selection_sort_desc(arr []int) []int {
+	if len(arr) == 0 || len(arr) == 1 {
+		return arr
+	}
 	for i := 0; i < len(arr); i++ {
 		maxIndex := math.MinInt
 		for j := i; j < len(arr); j++ {
